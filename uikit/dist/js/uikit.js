@@ -343,6 +343,10 @@
 
         var length = elements.length;
 
+        if (!length) {
+            return -1;
+        }
+
         i = isNumeric(i)
             ? toNumber(i)
             : i === 'next'
@@ -2888,26 +2892,21 @@
 
             var ref = this;
             var computed = ref.$options.computed;
-            var _computeds = ref._computeds;
+            var values = assign({}, this._computeds);
+            this._computeds = {};
 
             for (var key in computed) {
-
-                var hasPrev = hasOwn(_computeds, key);
-                var prev = _computeds[key];
-
-                delete _computeds[key];
-
                 var ref$1 = computed[key];
                 var watch = ref$1.watch;
                 var immediate = ref$1.immediate;
                 if (watch && (
                     initial && immediate
-                    || hasPrev && !isEqual(prev, this[key])
+                    || hasOwn(values, key) && !isEqual(values[key], this[key])
                 )) {
-                    watch.call(this, this[key], prev);
+                    watch.call(this, this[key], values[key]);
                 }
-
             }
+
         }
     }
 
@@ -7432,7 +7431,7 @@
         },
 
         data: function () { return ({
-            cls: false,
+            cls: '',
             target: false,
             hidden: true,
             offsetTop: 0,
@@ -10757,7 +10756,7 @@
                     } else if (startsWith(prop, 'bg')) {
 
                         var attr = prop === 'bgy' ? 'height' : 'width';
-                        steps = steps.map(function (step) { return toPx(step, attr, this$1$1.$el); });
+                        steps = steps.map(function (step) { return toPx(step, attr, $el); });
 
                         css($el, ("background-position-" + (prop[2])), '');
                         bgPos = css($el, 'backgroundPosition').split(' ')[prop[2] === 'x' ? 0 : 1]; // IE 11 can't read background-position-[x|y]
@@ -10791,7 +10790,7 @@
                             return props;
                         }
 
-                        var length = getMaxPathLength(this$1$1.$el);
+                        var length = getMaxPathLength($el);
                         css($el, 'strokeDasharray', length);
 
                         if (unit === '%') {
