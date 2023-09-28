@@ -8,7 +8,8 @@
       <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small">
         <h3 class="uk-card-title">Autentique-se</h3>
         <div class="uk-margin">
-          <input class="uk-input uk-form-large" formControlName="username" type="text" placeholder="CPF"/>
+          <input class="uk-input uk-form-large" formControlName="username" type="text" placeholder="CPF" 
+          [ngClass]="{'uk-form-danger': (!form.get('username')?.valid && !form.get('username')?.pristine)}"/>
         </div>
         <div class="uk-margin">
           <input class="uk-input uk-form-large" formControlName="password" type="password" placeholder="Senha"/>
