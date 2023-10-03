@@ -36,12 +36,45 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "da52bad6-6779-44b4-b9ac-76fdc670fc8d",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts/authenticate",
+      "responses": [
+        {
+          "uuid": "83f45d02-f061-436e-bdbe-2ab419d58abb",
+          "body": "{\n  \n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "Retorna dados do usuário",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "3449e9cb-a3ab-44dc-9ec2-2ebdbbeef066"
+    },
+    {
+      "type": "route",
+      "uuid": "da52bad6-6779-44b4-b9ac-76fdc670fc8d"
     }
   ],
   "proxyMode": false,

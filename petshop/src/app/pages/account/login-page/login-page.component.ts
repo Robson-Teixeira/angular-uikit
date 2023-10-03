@@ -31,4 +31,15 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit() {
+    this.data
+    .authenticate(this.form.value)
+    .subscribe(
+      {
+        next: (value: any) => localStorage.setItem('petshop.token', value.token),
+        error: (err) => console.log(err),
+        complete: () => console.info('Authenticate complete!')
+      }      
+    );
+  }
 }
