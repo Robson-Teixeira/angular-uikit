@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class LoginPageComponent implements OnInit {
 
   public form: FormGroup;
+  public busy = false;
 
   constructor(
     private data: DataService,
@@ -31,27 +32,28 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
     const token = localStorage.getItem('petshop.token');
     if (token) {
-      console.log('Authenticating...');
+      this.busy = true;
       this.data
       .refreshToken()
       .subscribe(
         {
           next: (value: any) => localStorage.setItem('petshop.token', value.token),
           error: () => localStorage.clear(),
-          complete: () => console.info('Token refresh complete!')
+          complete: () => this.busy = false
         }      
       );      
     }
   }
 
   submit() {
+    this.busy = true;
     this.data
     .authenticate(this.form.value)
     .subscribe(
       {
         next: (value: any) => localStorage.setItem('petshop.token', value.token),
         error: (err) => console.log(err),
-        complete: () => console.info('Authenticate complete!')
+        complete: () => this.busy = false
       }      
     );
   }
