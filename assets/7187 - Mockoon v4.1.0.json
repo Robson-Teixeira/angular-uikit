@@ -46,7 +46,7 @@
       "responses": [
         {
           "uuid": "83f45d02-f061-436e-bdbe-2ab419d58abb",
-          "body": "{\n  \n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+          "body": "{\n  \"customer\":{\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
           "latency": 2000,
           "statusCode": 200,
           "label": "Retorna dados do usuário",
@@ -75,7 +75,7 @@
       "responses": [
         {
           "uuid": "3f799174-9ade-4b4f-bad4-b0005bc9d744",
-          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+          "body": "{\n  \"customer\":{\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },  \n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
           "latency": 2000,
           "statusCode": 200,
           "label": "Retorna dados do usuário - Token atualizado",
