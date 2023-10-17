@@ -11,6 +11,7 @@
         <h3 class="uk-card-title">Autentique-se</h3>
         <div class="uk-margin">
           <input class="uk-input uk-form-large" formControlName="username" type="text" placeholder="CPF" 
+          mask="###.###.###-##"
           [ngClass]="{'uk-form-danger': (!form.get('username')?.valid && !form.get('username')?.pristine)}"/>
         </div>
         <div class="uk-margin">
