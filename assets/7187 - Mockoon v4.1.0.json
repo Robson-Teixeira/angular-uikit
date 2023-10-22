@@ -152,6 +152,64 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "7976ed90-6a8b-46a2-bd2d-1196b41bf78a",
+      "type": "http",
+      "documentation": "Obtém perfil do usuário",
+      "method": "get",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "9cde19fe-632a-4440-8037-8bcc550f2cdc",
+          "body": "{\n  \"name\": \"Bruce Wayne\",\n  \"document\": \"133.590.400-07\",\n  \"email\": \"batman@balta.io\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Dados do perfil recuperados",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "4fcb0554-2694-4cb9-bc9d-4a5570b3078e",
+      "type": "http",
+      "documentation": "Atualiza perfil do usuário",
+      "method": "put",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "7fd40884-aa7c-47dd-8576-db7a03d3840a",
+          "body": "{\n  \"message\": \"Dados atualizados com sucesso!\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Dados do perfil atualizados",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -174,6 +232,14 @@
     {
       "type": "route",
       "uuid": "4b1526f0-9acf-47ed-a799-c42ab823e50d"
+    },
+    {
+      "type": "route",
+      "uuid": "7976ed90-6a8b-46a2-bd2d-1196b41bf78a"
+    },
+    {
+      "type": "route",
+      "uuid": "4fcb0554-2694-4cb9-bc9d-4a5570b3078e"
     }
   ],
   "proxyMode": false,
