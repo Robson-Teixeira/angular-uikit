@@ -94,6 +94,35 @@
       ],
       "enabled": true,
       "responseMode": null
+    },
+    {
+      "uuid": "a024c235-a4e0-49ea-8462-3857d36b2792",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "accounts",
+      "responses": [
+        {
+          "uuid": "2a356fcd-5a5a-4b10-80fe-5ef27477d1f9",
+          "body": "{\n  \"message\": \"Bem-vindo ao Dachshop!\"\n}",
+          "latency": 800,
+          "statusCode": 200,
+          "label": "Retorna mensagem de boas vindas ao novo usuário",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -108,6 +137,10 @@
     {
       "type": "route",
       "uuid": "f2210e71-7210-466f-ba37-13c55ae3e7ba"
+    },
+    {
+      "type": "route",
+      "uuid": "a024c235-a4e0-49ea-8462-3857d36b2792"
     }
   ],
   "proxyMode": false,
