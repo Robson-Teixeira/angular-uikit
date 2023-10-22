@@ -11,7 +11,7 @@
     {
       "uuid": "3449e9cb-a3ab-44dc-9ec2-2ebdbbeef066",
       "type": "http",
-      "documentation": "",
+      "documentation": "Retorna uma lista detalhada de todos produtos cadastrados",
       "method": "get",
       "endpoint": "products",
       "responses": [
@@ -20,7 +20,7 @@
           "body": "[\n  {\n    \"_id\":\"481598b848f447b4b923ca2ad405aa09\",\n    \"title\":\"Cama M1 Urban\",\n    \"category\":\"accessories\",\n    \"description\":\"<ul><li><span><b>Pet:</b></span><span> Cachorros</span></li><li><span><b>Porte de Raça:</b></span><span> Grande, Médio e Pequeno</span></li><li><span><b>Idade:</b></span><span> Sênior, Adulto e Filhote</span></li><li><span><b>Material:</b></span><span> Plástico</span></li><li><span><b>Medidas<br>aproximadas:</b></span><span> Tamanho 8 (84 x 59,5 x h 25 cm), Tamanho 6 (70,5 x 52 x h 23,5 cm), Tamanho 4 (61,5 x 45 x h 21,5 cm), Tamanho 2 (52 x 36 x h 17,5 cm), Tamanho 12 (111 x 80,5 x h 33,5 cm), Tamanho 10 (93,5 x 68 x h 28 e5 cm)</span></li><li><span><b>Tipo:</b></span><span> Cama</span></li><li><span><b>Cor:</b></span><span> Bordô</span></li><li><span><b>Apresentação:</b></span><span> <p><span>Disponível nos tamanhos 2, 4, 6, 8, 10 e 12</span></p></span></li><li><span><b>Código de barras:</b></span><span> 8010690074689</span></li></ul>\",        \n    \"price\":5999,\n    \"images\":[\"https://images.petz.com.br/fotos/1525443192336.jpg\"]    \n  },\n  {\n    \"_id\":\"481598b848f447b4b923ca2ad405aa10\",\n    \"title\":\"Ração Golden Special Sabor Frango e Carne para Cães Adultos\",\n    \"category\":\"food\",\n    \"description\":\"<p>- Indicado para cães adultos;<br>- Livre de corantes e aromatizantes artificiais;<br>- Alimento rico em nutrientes;<br>- Promove o equilíbrio intestinal;<br>- Protege as articulações;<br>- Disponível em embalagens de 15kg e 20kg.</p>\",\n    \"price\":10490,\n    \"images\":[\"https://images.petz.com.br/fotos/1658429301983.jpg\"]\n  },\n  {\n    \"_id\":\"481598b848f447b4b923ca2ad405aa11\",\n    \"title\":\"Ração Royal Canin Golden Retriever - Cães Adultos - 12kg\",\n    \"category\":\"food\",\n    \"description\":\"<p>- Indicada para cães adultos; <br>- Específica para pets da raça Golden Retriever; <br>- Auxilia na manutenção do peso ideal; <br>- Mantém a saúde da musculatura cardíaca; <br>- Proporciona uma pele e pelagem mais saudáveis,<br>- Disponível em embalagem de 12kg. </p>\",\n    \"price\":21999,\n    \"images\":[\"https://images.petz.com.br/fotos/1660146020922.jpg\"]\n  }\n]",
           "latency": 2000,
           "statusCode": 200,
-          "label": "Retorna uma lista detalhada de todos produtos cadastrados",
+          "label": "Lista detalhada com produtos cadastrados",
           "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
@@ -40,7 +40,7 @@
     {
       "uuid": "da52bad6-6779-44b4-b9ac-76fdc670fc8d",
       "type": "http",
-      "documentation": "",
+      "documentation": "Retorna dados do usuário",
       "method": "post",
       "endpoint": "accounts/authenticate",
       "responses": [
@@ -49,7 +49,7 @@
           "body": "{\n  \"customer\":{\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
           "latency": 2000,
           "statusCode": 200,
-          "label": "Retorna dados do usuário",
+          "label": "Dados do usuário",
           "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
@@ -69,7 +69,7 @@
     {
       "uuid": "f2210e71-7210-466f-ba37-13c55ae3e7ba",
       "type": "http",
-      "documentation": "",
+      "documentation": "Retorna dados do usuário - Token atualizado",
       "method": "post",
       "endpoint": "accounts/refresh-token",
       "responses": [
@@ -78,7 +78,7 @@
           "body": "{\n  \"customer\":{\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },  \n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
           "latency": 2000,
           "statusCode": 200,
-          "label": "Retorna dados do usuário - Token atualizado",
+          "label": "Dados do usuário com token atualizado",
           "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
@@ -98,7 +98,7 @@
     {
       "uuid": "a024c235-a4e0-49ea-8462-3857d36b2792",
       "type": "http",
-      "documentation": "",
+      "documentation": "Retorna mensagem de boas vindas ao novo usuário",
       "method": "post",
       "endpoint": "accounts",
       "responses": [
@@ -107,7 +107,36 @@
           "body": "{\n  \"message\": \"Bem-vindo ao Dachshop!\"\n}",
           "latency": 800,
           "statusCode": 200,
-          "label": "Retorna mensagem de boas vindas ao novo usuário",
+          "label": "Novo usuário cadastrado com sucesso",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "4b1526f0-9acf-47ed-a799-c42ab823e50d",
+      "type": "http",
+      "documentation": "Reseta senha do usuário",
+      "method": "post",
+      "endpoint": "accounts/reset-password",
+      "responses": [
+        {
+          "uuid": "6b556251-2173-47f5-861b-f91fcbb1f423",
+          "body": "{\n  \"message\": \"Uma nova senha foi gerada e enviada para seu E-mail!\"\n}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "Senha resetada com sucesso",
           "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
@@ -141,6 +170,10 @@
     {
       "type": "route",
       "uuid": "a024c235-a4e0-49ea-8462-3857d36b2792"
+    },
+    {
+      "type": "route",
+      "uuid": "4b1526f0-9acf-47ed-a799-c42ab823e50d"
     }
   ],
   "proxyMode": false,
