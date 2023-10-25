@@ -15,7 +15,7 @@ export class CartPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadCart();
-  }
+  } 
 
   public loadCart(){
     this.cart = CartUtil.get();
@@ -31,5 +31,14 @@ export class CartPageComponent implements OnInit {
     CartUtil.clear();
     this.loadCart();
   }
+
+  public total() {
+    let total = 0;
+    this.cart.items.forEach((item) => {
+      total += (item.price * item.quantity);
+    });
+    
+    return total;
+  }  
 
 }
